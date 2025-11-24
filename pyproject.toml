@@ -36,8 +36,8 @@ sphinx = [
 ]
 
 [project.urls]
-Home = "https://github.com/attakei/rst-multi-ref"
-Repository = "https://github.com/attakei/rst-multi-ref"
+Home = "https://github.com/attakei/rst-package-refs"
+Repository = "https://github.com/attakei/rst-package-refs"
 
 [build-system]
 requires = ["hatchling"]
