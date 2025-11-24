@@ -6,7 +6,7 @@ includes:
     vars:
       RUN_PYTHON: 'uv run'
       SPHINX_ROOT_DIR: ''
-      SPHINX_SOURCE_DIR: 'docs'
+      SPHINX_SOURCE_DIR: 'doc'
       SPHINX_OUTPUT_DIR: 'build'
       SPHINX_DEFAULT_BUILDER: 'dirhtml'
 
