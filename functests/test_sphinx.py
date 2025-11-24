@@ -12,3 +12,10 @@ def test_work_on_sphinx(app: SphinxTestApp):
     assert index_html.exists()
     assert "https://www.npmjs.com/package/react" in index_html.read_text()
     assert "https://pypi.org/project/sphinx-revealjs" in index_html.read_text()
+
+
+@pytest.mark.sphinx("html", testroot="for-parallel-build", parallel=2)
+def test_parallel_build(app: SphinxTestApp, warning):
+    """Simple test that it passed for sphinx-build using parallel build."""
+    app.build()
+    assert not warning.getvalue()
