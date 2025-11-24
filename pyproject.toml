@@ -55,6 +55,9 @@ docs = [
     "sphinx~=7.2.0",
     "sphinx-tabs~=3.4.5",
 ]
+lint = [
+    "ty>=0.0.1a27",
+]
 test = [
     "pytest~=8.0.1",
 ]
