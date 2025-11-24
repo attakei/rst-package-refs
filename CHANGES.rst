@@ -1,3 +1,13 @@
+v0.2.0
+======
+
+:Date: 2025-11-25 (Asia/Tokyo)
+
+Features
+--------
+
+* Mark to support for parallel build of Sphinx.
+
 v0.1.0
 ======
 
