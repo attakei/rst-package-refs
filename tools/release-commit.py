@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Batch script to generate 'release' commit."""
+
 import argparse
 import shutil
 import subprocess

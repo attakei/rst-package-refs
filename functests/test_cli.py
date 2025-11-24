@@ -1,4 +1,5 @@
 """Test cases for CLI testing."""
+
 import subprocess
 
 

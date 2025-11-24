@@ -1,4 +1,5 @@
 """PyPI registry refecence module."""
+
 from typing import List, Optional
 
 from docutils import nodes

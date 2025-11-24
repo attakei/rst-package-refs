@@ -1,4 +1,5 @@
 """Sphinx extension handler module."""
+
 from sphinx.application import Sphinx
 from sphinx.config import Config
 
