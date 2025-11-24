@@ -13,13 +13,10 @@ replace = "version = \"{{new_version}}\""
 [[files]]
 path = "CHANGES.rst"
 search = """
-Change logs
-===========
+v{{ current_version }}
+={{#sameLengthChars}}=@{{current_version}}{{/sameLengthChars}}
 """
 replace = """
-Change logs
-===========
-
 v{{ new_version }}
 ={{#sameLengthChars}}=@{{new_version}}{{/sameLengthChars}}
 
@@ -36,6 +33,9 @@ Fixes
 
 Others
 ------
+
+v{{ current_version }}
+={{#sameLengthChars}}=@{{current_version}}{{/sameLengthChars}}
 """
 
 [[files]]
