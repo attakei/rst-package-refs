@@ -1,6 +1,8 @@
 ### GIGI version 0.1.0
 ### command with: python
 
+.task
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/

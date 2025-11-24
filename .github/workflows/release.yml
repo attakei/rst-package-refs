@@ -5,16 +5,21 @@ on:
     tags:
       - 'v*.*.*'
 
+env:
+  TASK_X_REMOTE_TASKFILES: 1
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: eifinger/setup-rye@v1
+      - uses: actions/checkout@v5
+      - uses: aquaproj/aqua-installer@ea518c135a02fc11ff8024364510c181a5c6b342 # v4.0.3
+        with:
+          aqua_version: v2.51.2
       - name: Build package
         id: build_package
         run: |
-          rye build
+          uv build
       - uses: actions/upload-artifact@v4
         with:
           name: packages-${{ github.ref_name }}
@@ -32,7 +37,7 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           artifacts: 'dist/*'
-          body: 'See https://github.com/attakei/rst-multi-refs/blob/main/CHANGELOG.rst'
+          bodyFile: '.github/release-body.md'
           draft: false
           name: Release ${{ github.ref_name }}
           tag: ${{ github.ref }}
@@ -42,9 +47,9 @@ jobs:
     needs: [build]
     environment:
       name: pypi
-      url: https://pypi.org/p/rst-multi-refs
+      url: https://pypi.org/p/rst-package-refs
     permissions:
-      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
       - uses: actions/download-artifact@v4
         with:
