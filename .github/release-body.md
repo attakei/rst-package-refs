@@ -1,0 +1,2 @@
+- Changelog is https://github.com/attakei/rst-package-refs/blob/v0.1.0/CHANGES.rst
+- You can source diff to https://github.com/attakei/rst-package-refs/compare/v0.0.0..v0.1.0
