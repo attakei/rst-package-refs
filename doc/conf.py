@@ -21,6 +21,11 @@ html_theme = "furo"
 html_title = f"{project} v{release}"
 html_static_path = ["_static"]
 
+# -- Options for Linkcheck output
+linkcheck_ignore = [
+    "https://www.npmjs.com/",
+]
+
 # -- Extension configuration
 # For sphinx.ext.intersphinx
 intersphinx_mapping = {
